@@ -9,6 +9,7 @@ import umc.study.domain.enums.Gender;
 import umc.study.domain.enums.SocialType;
 import umc.study.domain.enums.MemberStatus;
 import umc.study.domain.mapping.MemberAgree;
+import umc.study.domain.mapping.MemberCeo;
 import umc.study.domain.mapping.MemberMission;
 import umc.study.domain.mapping.MemberPrefer;
 
@@ -69,4 +70,7 @@ public class Member extends BaseEntity {
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberMission> memberMissionList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
+    private List<MemberCeo> memberCeoList = new ArrayList<>();
 }
