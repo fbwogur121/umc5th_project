@@ -2,6 +2,7 @@ package umc.study.domain;
 
 import lombok.*;
 import umc.study.domain.common.BaseEntity;
+import umc.study.domain.mapping.MemberCeo;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -30,4 +31,7 @@ public class Store extends BaseEntity {
 
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
     private List<Mission> missionList = new ArrayList<>();
+    
+    @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
+    private List<MemberCeo> memberCeoList = new ArrayList<>();
 }
